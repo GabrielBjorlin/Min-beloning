@@ -1,6 +1,7 @@
 import "../styles/globals.css"
 import HomeIcon from "@mui/icons-material/Home"
 import { Link } from "@material-ui/core"
+import { SnackbarProvider } from "notistack"
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -10,7 +11,9 @@ function MyApp({ Component, pageProps }) {
           <HomeIcon style={{ fontSize: "40px" }} />
         </Link>
       </div>
-      <Component {...pageProps} />
+      <SnackbarProvider maxSnack={3}>
+        <Component {...pageProps} />
+      </SnackbarProvider>
     </>
   )
 }
