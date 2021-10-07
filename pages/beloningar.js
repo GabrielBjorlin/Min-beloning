@@ -14,12 +14,12 @@ const beloningar = () => {
         </Grid>
         <Grid item xs={12}>
           <Paper className={styles.paper}>
-            <Typography variant="h6">Biobiljett</Typography>
+            <Typography variant="h6">Utflykt</Typography>
           </Paper>
         </Grid>
         <Grid item xs={12}>
           <Paper className={styles.paper}>
-            <Typography variant="h6">Biobiljett</Typography>
+            <Typography variant="h6">Exempel 3</Typography>
           </Paper>
         </Grid>
       </Grid>
