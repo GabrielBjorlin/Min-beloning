@@ -8,13 +8,16 @@ const Uppdrag = () => {
   const router = useRouter()
   return (
     <div className={styles.container}>
-      <Typography variant="h2">{router.query.name}</Typography>
+      <Typography variant="h2">{router.query.header}</Typography>
       <Grid container style={{ marginTop: "30px" }}>
         <Grid item xs={12}>
           <Paper className={styles.paper}>
             <CameraAltIcon style={{ fontSize: "100px" }} />
           </Paper>
         </Grid>
+        <Typography style={{ marginTop: "30px" }} variant="body1">
+          {router.query.description}
+        </Typography>
       </Grid>
     </div>
   )

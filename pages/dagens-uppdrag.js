@@ -6,10 +6,24 @@ import { useRouter } from "next/router"
 let uppdrag = "Ta kort på en svan"
 
 const activities = [
-  "Ta kort på en svan",
-  "Plocka blommor",
-  "Spela basket",
-  "Gå en promenad",
+  {
+    header: "Ta kort på en svan",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+  },
+  {
+    header: "Plocka blommor",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+  },
+  {
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+  },
+  {
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+  },
 ]
 
 const DagensUppdrag = () => {
@@ -25,7 +39,10 @@ const DagensUppdrag = () => {
   const navigate = () => {
     router.push({
       pathname: "/dagens-uppdrag/uppdrag",
-      query: { name: activities[currentIndex] },
+      query: {
+        header: activities[currentIndex].header,
+        description: activities[currentIndex].description,
+      },
     })
   }
 
@@ -35,7 +52,9 @@ const DagensUppdrag = () => {
       <Grid container style={{ marginTop: "30px" }}>
         <Grid item xs={12}>
           <Paper className={styles.paper} onClick={navigate}>
-            <Typography variant="h5">{activities[currentIndex]}</Typography>
+            <Typography variant="h5">
+              {activities[currentIndex].header}
+            </Typography>
           </Paper>
         </Grid>
 
