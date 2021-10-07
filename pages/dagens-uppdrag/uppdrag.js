@@ -1,6 +1,6 @@
 import { Grid, Paper, Typography } from "@material-ui/core"
 import React from "react"
-import styles from "../../styles/Home.module.css"
+import styles from "../../styles/Uppdrag.module.css"
 import CameraAltIcon from "@mui/icons-material/CameraAlt"
 
 const Uppdrag = () => {

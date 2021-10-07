@@ -1,7 +1,9 @@
-import { Grid, Paper, Typography } from "@material-ui/core"
+import { Grid, Paper, Typography, Button } from "@material-ui/core"
 import React from "react"
-import styles from "../styles/Home.module.css"
+import styles from "../styles/Dagens-uppdrag.module.css"
 import { useRouter } from "next/router"
+
+let uppdrag = "Ta kort på en svan"
 
 const DagensUppdrag = () => {
   const router = useRouter()
@@ -16,10 +18,18 @@ const DagensUppdrag = () => {
       <Grid container style={{ marginTop: "30px" }}>
         <Grid item xs={12}>
           <Paper className={styles.paper} onClick={navigate}>
-            <Typography variant="h5">Ta kort på en svan</Typography>
+            <Typography variant="h5">{uppdrag}</Typography>
           </Paper>
         </Grid>
+
+        <Grid item xs={12}>
+          <Button variant="contained">
+             Slumpa nytt uppdrag
+          </Button>
+        </Grid>
+
       </Grid>
+
     </div>
   )
 }

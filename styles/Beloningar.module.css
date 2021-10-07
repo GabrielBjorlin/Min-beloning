@@ -1,10 +1,10 @@
 .container {
-  text-align: center
+  text-align: center;
 }
 
 .paper {
   padding: 35px;
   box-shadow: 5px 5px 10px black !important;
   margin-bottom: 20px;
-  background-color: #FFAD21 !important;
+  background-color: #ffad21 !important;
 }
