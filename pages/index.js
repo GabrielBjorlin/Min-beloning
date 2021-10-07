@@ -8,6 +8,9 @@ import {
   DAGENUPPDRAG,
   HISTORIK,
 } from "../src/utils/config"
+import SettingsIcon from "@mui/icons-material/Settings"
+import Image from "next/image"
+import StarIcon from "@mui/icons-material/Star"
 
 export default function Home() {
   const router = useRouter()
@@ -22,15 +25,22 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Typography variant="h2">Min Belöning</Typography>
-      <Grid container spacing={3} style={{ marginTop: "30px" }}>
+      <Grid container style={{ marginTop: "30px" }}>
         <Grid item xs={6}>
-          <Paper className={styles.paper} onClick={() => navigate(BELONINGAR)}>
-            <Typography variant="h6">Mina Belöningar</Typography>
+          <Paper
+            className={styles.paper}
+            style={{ marginRight: "6px" }}
+            onClick={() => navigate(BELONINGAR)}
+          >
+            <Typography variant="h6">Belöningar</Typography>
           </Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={styles.paper} onClick={() => navigate(HISTORIK)}>
-            <Typography variant="h6">Min</Typography>
+          <Paper
+            className={styles.paper}
+            style={{ marginLeft: "6px" }}
+            onClick={() => navigate(HISTORIK)}
+          >
             <Typography variant="h6">Historik</Typography>
           </Paper>
         </Grid>
@@ -48,6 +58,25 @@ export default function Home() {
             <Typography variant="h6">Välj Själv</Typography>
           </Paper>
         </Grid>
+
+        <div style={{ marginTop: "10px" }}>
+          <Image src="/images/progress.png" height="52px" width="411px" />
+        </div>
+        <Grid item xs={12} style={{ textAlign: "center" }}>
+          <Typography
+            variant="body1"
+            style={{
+              display: "inline",
+              fontSize: "52px",
+              fontWeight: "bold",
+            }}
+          >
+            65
+          </Typography>{" "}
+          <StarIcon style={{ fontSize: "40px" }} />
+        </Grid>
+
+        <SettingsIcon style={{ fontSize: "60px", color: "#FFAD21" }} />
       </Grid>
     </div>
   )
