@@ -45,7 +45,7 @@ const Blommor = () => {
 
   return (
     <div className={styles.container}>
-      <Typography variant="h2">Dagens Uppdrag</Typography>
+      <Typography variant="h2">Blommor</Typography>
       <Grid container style={{ marginTop: "30px" }}>
         <Grid item xs={12}>
           <Paper className={styles.paper} onClick={navigate}>

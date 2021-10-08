@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <div style={{ textAlign: "center" }}>
         <Link href="/">
-          <HomeIcon style={{ fontSize: "40px" }} />
+          <HomeIcon style={{ fontSize: "40px", color: "black" }} />
         </Link>
       </div>
       <SnackbarProvider maxSnack={3}>

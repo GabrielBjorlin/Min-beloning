@@ -76,7 +76,7 @@ export default function Home() {
           <StarIcon style={{ fontSize: "40px" }} />
         </Grid>
 
-        <SettingsIcon style={{ fontSize: "60px", color: "#FFAD21" }} />
+        <SettingsIcon style={{ fontSize: "60px", marginLeft: "10px" }} />
       </Grid>
     </div>
   )
